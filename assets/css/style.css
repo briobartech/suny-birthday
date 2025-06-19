@@ -1,0 +1,125 @@
+.title {
+  font-family: 'Press Start 2P', cursive, monospace;
+  letter-spacing: 2px;
+  color: #ffffff9a;
+  font-size: 1em;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  perspective: 1000px;
+  margin: 30px auto;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* .card:hover .card-inner {
+  transform: rotateY(180deg);
+} */
+
+.card-front, .card-back {
+  position: absolute;
+  top: 0; /* Asegura alineación */
+  left: 0;
+  width: 110%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-front {
+  background: #fff;
+   margin: 5px;
+}
+
+.card-back {
+  background: #111;
+  color: #fff;
+  transform: rotateY(180deg);
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+ 
+}
+.card.is-flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: #050505;
+  overflow: hidden;
+}
+
+.card-front {
+  position: relative;
+  background: #fff;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.card-front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255, 255, 255, 0.100) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 2.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    left: -60%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .card, .card-front, .card-back {
+    width: 90vw;
+    height: 100%;
+    max-width: 98vw;
+    max-height: 98vh;
+    min-width: 200px;
+    min-height:400px;
+    font-size: 13px;
+  }
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
