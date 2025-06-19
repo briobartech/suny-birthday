@@ -21,6 +21,9 @@
   transition: transform 1s;
   transform-style: preserve-3d;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* .card:hover .card-inner {
@@ -31,7 +34,7 @@
   position: absolute;
   top: 0; /* Asegura alineación */
   left: 0;
-  width: 110%;
+  width: 100%;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 20px;
@@ -96,6 +99,24 @@ body {
   pointer-events: none;
 }
 
+.download-btn {
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 12px 32px;
+  font-family: 'Press Start 2P', cursive, monospace;
+  font-size: 1em;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0005;
+  transition: background 0.2s;
+}
+.download-btn:hover {
+  background: #444;
+}
+
 @keyframes shine {
   0% {
     left: -60%;
@@ -107,6 +128,21 @@ body {
 
 
 @media (max-width: 600px) {
+.download-btn {
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 12px 32px;
+  font-family: 'Press Start 2P', cursive, monospace;
+  font-size: 0.6em;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0005;
+  transition: background 0.2s;
+}
+
 
   .card, .card-front, .card-back {
     width: 90vw;
