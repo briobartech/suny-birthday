@@ -24,7 +24,7 @@ cardBack.appendChild(parrafo);
 
 document.getElementById('descargar-ilustracion').addEventListener('click', function() {
   const link = document.createElement('a');
-  link.href = 'assets/css/style.css'; // Cambia por la ruta real de tu imagen
+  link.href = 'assets/suny-gift.png'; // Cambia por la ruta real de tu imagen
   link.download = 'ilustracion.png';
   document.body.appendChild(link);
   link.click();
