@@ -2,7 +2,7 @@ const card = document.querySelector('.card');
 
 const cardBack = document.getElementById('card-back');
 const cardFront = document.getElementById('card-front');
-const menssage = `Quería desearte, para empezar, un feliz cumpleaños. \n Y espero que poco a poco las cosas se vayan acomodando en tu vida. 
+const menssage = `Quería desearte, para empezar, un feliz cumpleaños. Y espero que poco a poco las cosas se vayan acomodando en tu vida. 
 Así como las placas tectónicas se acomodan, y hacen temblar a Chile, la vida nos desestabiliza para ponernos en el lugar que debemos estar.
 Poco a poco vas logrando encontrar aquello que te hace feliz, y eso me pone feliz a mi. 
 Me dijiste que estás intentando mejorar, y cada vez que hablamos lo noto. Me alegra poder ser testigo de eso. Me maravilla como quien haya sido testigo del primer amanecer, aunque yo no sea el primero. Pero aún disfruto de esa calidez, y es suficiente para mí. 
@@ -15,10 +15,10 @@ card.addEventListener('click', function () {
   card.classList.toggle('is-flipped');
 });
 
-const parrafo = document.createElement('p');
+/* const parrafo = document.createElement('p');
 parrafo.textContent = menssage;
 
-cardBack.appendChild(parrafo);
+cardBack.appendChild(parrafo); */
 
 // ...existing code...
 
